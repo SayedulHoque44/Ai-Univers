@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- style Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome script -->
+    <script
+      src="https://kit.fontawesome.com/708755f23c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom Css -->
+    <style>
+      .lightDangerBg {
+        background-color: rgb(254 236 236);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header area -->
+    <header class="container text-center p-3">
+      <h1 class="py-4">AI Universe Hub</h1>
+      <button id="sortDateBtn" class="btn btn-primary rounded d-none">
+        Sort By Date
+      </button>
+    </header>
+    <!-- main -->
+    <main>
+      <!-- data section -->
+      <section class="p-3 container">
+        <div class="row row-cols-1 row-cols-xl-3 g-3" id="CardContainer"></div>
+        <div class="d-flex justify-content-center d-none" id="spinar">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <button
+          id="showAllBtn"
+          class="btn btn-primary rounded d-block mx-auto my-3"
+        >
+          Show All
+        </button>
+      </section>
+      <!-- Modal Section -->
+      <section>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="cardDetails"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="cardDetailsLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable"
+          >
+            <div class="modal-content p-lg-5">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <!-- modal Body -->
+              <div class="modal-body d-flex justify-content-around">
+                <div
+                  class="row row-cols-1 row-cols-xl-2"
+                  id="CardDetailsContainer"
+                >
+                  <!-- left side -->
+                  <div class="col">
+                    <div
+                      class="rounded p-3 border border-danger-subtle lightDangerBg"
+                    >
+                      <h4 id="detailsDescription">
+                        ChatGPT is an AI-powered chatbot platform that uses
+                        OpenAI's GPT technology to simulate human conversation.
+                      </h4>
+                      <div class="d-flex justify-content-between">
+                        <p
+                          class="rounded text-success bg-white p-2"
+                          id="monthBasic"
+                        >
+                          text
+                        </p>
+                        <p
+                          class="rounded text-warning bg-white p-2"
+                          id="monthPro"
+                        >
+                          text
+                        </p>
+                        <p
+                          class="rounded text-danger bg-white p-2"
+                          id="enterprice"
+                        >
+                          text
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <h4>Features</h4>
+                          <div id="detailsFeatures"></div>
+                        </div>
+                        <div>
+                          <h4>Integrations</h4>
+                          <div id="detailsIntegrations">
+                            <ul id="detailsIntegrationsUl"></ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- right side -->
+                  <div class="col">
+                    <div
+                      class="rounded px-2 py-3 border border-secondary-subtle position-relative"
+                      id="detailsAi"
+                    >
+                      <span
+                        id="detailsAccuracy"
+                        class="badge text-bg-danger position-absolute top-0 end-0"
+                        >94%</span
+                      >
+
+                      <div id="detailsRightsideImg"></div>
+                      <div class="py-2 px-4">
+                        <h4 id="aiAsk"></h4>
+                        <p class="text-secondary" id="aiAnswer"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- script  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
